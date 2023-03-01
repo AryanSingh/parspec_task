@@ -1,4 +1,4 @@
-downlod and unzip the folder
-cd into folder
-npm install 
+downlod and unzip the folder \n
+cd into folder \n
+npm install \n
 npm run dev
