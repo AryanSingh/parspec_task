@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+.searchTerm{
+  width: 100%;
+  border: 3px solid #00B4CC;
+  /*border-right: none;*/
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px ;
+  outline: none;
+  color: #9DBFAF;
+}

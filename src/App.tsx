@@ -98,7 +98,7 @@ function App() {
     <div className="App">
       <div style={{margin: "auto"}}>
         <div style={{width: "300px"}}>
-          <input value={searchStr} onChange={(e) => setSearchStr(e.target.value)} type="text"/>
+          <input className="searchTerm" value={searchStr} placeholder="Search by id/name/pincode/address/item" onChange={(e) => setSearchStr(e.target.value)} type="text"/>
           <div style={{display: "flex", flexDirection: "column", gap: 10, margin: "10px"}}>
             {filteredCardData.map((card, i) => {
 
