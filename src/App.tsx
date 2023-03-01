@@ -99,21 +99,24 @@ function App() {
       <div style={{margin: "auto"}}>
         <div style={{width: "300px"}}>
           <input value={searchStr} onChange={(e) => setSearchStr(e.target.value)} type="text"/>
-          {filteredCardData.map((card, i) => {
+          <div style={{display: "flex", flexDirection: "column", gap: 10, margin: "10px"}}>
+            {filteredCardData.map((card, i) => {
 
-            return (
-              <div
-                // @ts-ignore
-                ref={el => itemsRef.current[i] = el}
-                style={{
-                  cursor: 'pointer',
-                  backgroundColor: i === state.selectedIndex ? 'yellow' : '',
-                }}
-                key={card.id} onMouseEnter={() => dispatch({ type: 'select', payload: i })}>
-                <Card searchStr={searchStr}  data={card}/>
-              </div>
-            )
-          })}
+              return (
+                <div
+                  // @ts-ignore
+                  ref={el => itemsRef.current[i] = el}
+                  style={{
+                    cursor: 'pointer',
+                    backgroundColor: i === state.selectedIndex ? 'yellow' : '',
+                  }}
+                  key={card.id} onMouseEnter={() => dispatch({ type: 'select', payload: i })}>
+                  <Card searchStr={searchStr}  data={card}/>
+                </div>
+              )
+            })}
+          </div>
+
         </div>
       </div>
     </div>
