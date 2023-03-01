@@ -1,0 +1,1 @@
+//   "id": "123-s3-146",//   "name": "David Mire",//   "items": ["Bedroom Set"],//   "address": "2nd Cross, BTI Apartment",//   "pincode": "4xx012"export interface ICard{  id: string;  name: string;  items: string[];  address: string;  pincode: string;}
