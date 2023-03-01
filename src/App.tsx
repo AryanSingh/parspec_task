@@ -45,7 +45,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch("http://www.mocky.io/v2/5ba8efb23100007200c2750c")
+    fetch("https://www.mocky.io/v2/5ba8efb23100007200c2750c")
       .then((response) => response.json())
       .then((actualData) => setCardData(actualData))
       .catch((err) => {
@@ -110,7 +110,8 @@ function App() {
                     cursor: 'pointer',
                     backgroundColor: i === state.selectedIndex ? 'yellow' : '',
                   }}
-                  key={card.id} onMouseEnter={() => dispatch({ type: 'select', payload: i })}>
+                  key={card.id}
+                  onMouseEnter={() => dispatch({ type: 'select', payload: i })}>
                   <Card searchStr={searchStr}  data={card}/>
                 </div>
               )
